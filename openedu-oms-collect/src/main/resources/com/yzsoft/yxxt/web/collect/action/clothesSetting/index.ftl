@@ -1,0 +1,6 @@
+[#ftl]
+[@b.navmenu title="军训服装设置" target="clothes_setting_div"]
+    [@b.navitem title="服装尺码设置" href="clothes-size"/]
+    [@b.navitem title="鞋子尺码设置" href="shoes-size"/]
+[/@]
+[@b.div id="clothes_setting_div"/]

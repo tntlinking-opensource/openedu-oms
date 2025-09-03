@@ -1,0 +1,39 @@
+/*宿舍安排计划*/
+.ht-progress{height:30px;line-height:30px; font-size:12px;}
+.ht-progress-bar{line-height:30px;}
+.ht-collapse{background-color:#ffffff; border:1px solid #e1e1e1;}
+.ht-collapse ul{list-style:none; padding:0; margin:0;}
+.ht-collapse .nav-tabs>li.active>a{background-color:#e9eef2;border:none;}
+.ht-collapse .tabs-left.nav-tabs{border-right:none;}
+.ht-collapse .tabs-left.nav-tabs>li>a{margin-right:0;}
+.ht-collapse-title{display:block;padding:10px;color:#1a1a1a; }
+.ht-collapse-title:hover{background-color:#f9f9f9;color:#337ab7; text-decoration:none;}
+.ht-collapse .ht-collapse-title{background-color:#f9f9f9;color:#337ab7;}
+.ht-tab-link{display:block;padding:10px 20px;color:#333333;}
+.ht-tab-link:hover{background-color:#e7e7e7; text-decoration:none;}
+.ht-room-zhushi img{margin-right:5px;}
+.ht-margin-0{margin:0;}
+.ht-margin-10{margin:10px 0;}
+.ht-data-bg{background-color:#f3f6f9; padding:10px 0;}
+.ht-notice-words-yellow{color:#faad27;line-height:300%; margin-left:10px;}
+.ht-room-full{background-color:#a3a3a3;color:#FFF;}
+.ht-room-empty{background-color:#FFF;color:#333333;}
+.ht-room-halffull{background-color:#70aacb;color:#FFF;}
+.ht-room-gou{background:url(../images/gou-bg_03.png) no-repeat center center;}
+.ht-room-noroom{background-color:#b9b08c;color:#FFF;}
+.ht-floor:after { display: block; content: ""; clear: both; }
+.room {height:38px; cursor:pointer;font-size:12px;}
+.room span { text-align: center; display: block; }
+.room .beds { display:none; border:1px solid #dbdbdb; border-radius:5px!important; box-shadow:0 0 5px #f5f5f5; background-color:#FFF; color:#666666; padding:10px;
+position:absolute;z-index:999;}
+.room ol { margin: 0; padding: 0;}
+.room li { list-style: none; margin: 5px; }
+.ht-modal-footer{text-align:center;}
+.ht-no-btn{background-color:transparent;border:none;}
+.ht-dayin-a-title{font-size:16px;clear:both;}
+.modal-body .table td, .table th{font-size:12px;}
+.modal-body .table thead tr th{font-size:12px;}
+.modal-scrollable .modal-content{-webkit-box-shadow:none;box-shadow:none;border:none;}
+@media (min-width: 768px){
+	.modal-content{-webkit-box-shadow:none;box-shadow:none;}
+	}

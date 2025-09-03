@@ -1,0 +1,8 @@
+[#ftl]
+[@b.head/]
+[@b.form name="iconLinkSearchForm"  action="!search" target="iconLinklist" title="ui.searchForm" theme="search"]
+	[@b.textfields names="iconLink.name;名称"/]
+    [@b.select name="iconLink.enabled" label="状态" value="" empty="..." items={'1':'启用','0':'禁用'}/]
+[/@]
+[@b.div id="iconLinklist" href="!search" /]
+[@b.foot/]

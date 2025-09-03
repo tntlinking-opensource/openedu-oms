@@ -1,0 +1,10 @@
+[#ftl]
+[@b.head/]
+[@b.form action="!save" title="参数设置" theme="form"]
+    [@b.radios label="学生密码生成方式" name="prepareConfig.passwordType.id" value=(prepareConfig.passwordType.id)!0 required="true" items=passwordTypes/]
+    [@b.formfoot]
+    <input type="hidden" name="prepareConfig.id" value="${prepareConfig.id!}"/>
+        [@b.submit value="action.submit"/]
+    [/@]
+[/@]
+[@b.foot/]

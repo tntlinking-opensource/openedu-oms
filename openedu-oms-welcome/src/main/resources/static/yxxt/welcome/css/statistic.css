@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.login .logo{background-color:#10609e;}
+
+.progress-title{ font-size:40px; padding-top:20px; color:#043a64; font-weight:800;}
+.page-container .progress{ height:100px; clear:both;}
+.page-container p{ font-size:24px; color:#333333;}
+.page-container p strong{ font-size:50px;}
+.page-container .text-center{ margin-top:30px;}
+.page-container .text-center .btn{-webkit-border-radius:4px !important;-moz-border-radius:4px !important;-ms-border-radius:4px !important;-o-border-radius:4px !important; border-radius:4px ;
+font-size:20px;}
+.page-container .text-center button{line-height:200%; margin-right:60px; padding-left:30px; padding-right:30px;}
+.page-container .text-center a{ line-height:200%; padding-left:50px; padding-right:50px;}
+.statistic-progress{font-size:28px;text-decoration:none;line-height:350%;font-style:initial;}
+.color-block{margin-right:10px;vertical-align:middle;}
+.progress-title-detail{font-size:30px; padding-top:20px; color:#333333;}
+
+.page-container .progress-title-total{font-size:16px;display:block; width:100%;padding:10px;background-color:#f3f6f9;text-align:center;color:#666666;margin-top:40px;}
+.page-container .progress-title-total span{color:#fa1515;font-weight:bold;}
+.statisticdetail-table{width:100%;border-top:1px solid #dcdcdc;border-left:1px solid #dcdcdc;margin-top:20px;}
+.statisticdetail-table tr th{border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;text-align:center;background-color:#fafafa;padding:15px 5px;}
+.statisticdetail-table tr td{border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;text-align:center;padding:15px 5px;}
+

@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="com.yzsoft.yxxt.web.model.Column"/>
+        <mapping class="com.yzsoft.yxxt.web.model.Content"/>
+        <mapping class="com.yzsoft.yxxt.web.model.FootLink"/>
+        <mapping class="com.yzsoft.yxxt.web.model.ImgLink"/>
+        <mapping class="com.yzsoft.yxxt.web.model.IconLink"/>
+        <mapping class="com.yzsoft.yxxt.web.model.ViewSet"/>
+        <mapping class="com.yzsoft.yxxt.web.model.WelcomeLink"/>
+        <mapping class="com.yzsoft.yxxt.web.ask.model.AskCommon"/>
+        <mapping class="com.yzsoft.yxxt.web.ask.model.AskPlate"/>
+        <mapping class="com.yzsoft.yxxt.web.ask.model.AskStudent"/>
+        <mapping class="com.yzsoft.yxxt.web.ask.model.MsgGroup"/>
+        <mapping class="com.yzsoft.yxxt.web.ask.model.MsgGroupMsg"/>
+        <mapping class="com.yzsoft.yxxt.web.ask.model.MsgGroupMember"/>
+    </session-factory>
+</hibernate-configuration>

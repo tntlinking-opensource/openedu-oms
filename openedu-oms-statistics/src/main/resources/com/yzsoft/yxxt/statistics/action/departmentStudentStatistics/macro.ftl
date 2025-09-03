@@ -1,0 +1,10 @@
+[#ftl]
+
+[#function getData year name]
+	[#list data.items as v]
+		[#if v.year == year && v.name == name]
+			[#return v.num/]
+		[/#if]
+	[/#list]
+	[#return 0/]
+[/#function]

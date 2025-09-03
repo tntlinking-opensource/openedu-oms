@@ -1,0 +1,7 @@
+[#ftl]
+[@b.head/]
+[@b.form name="askPlateSearchForm"  action="!search" target="askPlatelist" title="ui.searchForm" theme="search"]
+    [@b.textfield label="名称" name="askPlate.name"/]
+[/@]
+[@b.div id="askPlatelist" href="!search" /]
+[@b.foot/]

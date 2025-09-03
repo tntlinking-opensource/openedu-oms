@@ -1,0 +1,5 @@
+[#ftl]
+[#include "../comm/print.ftl"/]
+[@print]
+    [#include "countBody.ftl"/]
+[/@print]

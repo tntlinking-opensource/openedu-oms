@@ -1,0 +1,18 @@
+[#ftl]
+[@b.head/]
+[#assign adSearchParams="student.enrollType.id"/]
+[@b.form name="studentMajorSearchForm"  action="!search?orderBy=studentMajor.student.code" target="studentMajorList" title="ui.searchForm" theme="msearch"]
+    [@b.field]
+        [@b.textfield label="年份" name="studentMajor.student.grade" value=year/]
+        [@b.textfield label="学号" name="studentMajor.student.code"/]
+        [@b.textfield label="姓名" name="studentMajor.student.name"/]
+        [@b.select label="是否填写" name="isCollect" items={'1':'是','0':'否'} theme="search"/]
+    [/@]
+    [@b.fieldSelect]
+        [@b.select label="招生类别" name="student.enrollType.ids" items=enrollTypes/]
+    [/@]
+<input type="hidden" name="adSearchParams" value="${(adSearchParams)!}">
+<input type="hidden" name="adSearchBooleanParams" value="${(adSearchBooleanParams)!}">
+[/@]
+[@b.div id="studentMajorList" href="!search?studentMajor.student.grade=${year}&orderBy=studentMajor.student.code" /]
+[@b.foot/]

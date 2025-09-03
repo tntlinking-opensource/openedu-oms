@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.page-content-wrapper .page-content{ margin-left:0;}
+.padding_left_0{ padding-left:0px;}
+
+/* 统计报告图表 */
+.stat-list-1{ list-style: none; padding:0px; margin:0px;}
+.stat-list-1 li.list_bg{ background:#E5E5E5; position:relative;}
+.progress-mini-1{ height:25px; margin-bottom:0px; border-left: 3px solid #29acd2; margin-top:10px; background:#4FDFD6;}
+.progress-style-01{ padding-left:5px; font-family:微软雅黑; font-size:12px; font-style:normal; color:#333; height:25px; line-height:25px; position:absolute; top:0;}

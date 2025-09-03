@@ -1,0 +1,6 @@
+[#ftl]
+[#include "../comm/lib.ftl"/]
+[@b.head/]
+[@panel title="出错了"]
+[/@panel]
+[@b.foot/]

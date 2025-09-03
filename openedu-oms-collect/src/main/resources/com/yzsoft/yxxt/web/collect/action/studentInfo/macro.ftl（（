@@ -1,0 +1,690 @@
+[#ftl]
+[#import "/template/form/utils.ftl" as fu/]
+[#assign text = "com.yzsoft.yxxt.web.collect.freemarker.Text"?new()/]
+
+[#macro hasConfig type]
+    [#assign result = false/]
+    [#list configs as config]
+        [#if config.type.id == type.id]
+            [#assign result = true/]
+            [#break /]
+        [/#if]
+    [/#list]
+    [#if result]
+        [#nested /]
+    [/#if]
+[/#macro]
+
+[#function typeSave type]
+    [#assign  code = "TYPE_" + type.id/]
+    [#list studentInfoStates as state]
+        [#if state.code == code]
+            [#return true/]
+        [/#if]
+    [/#list]
+    [#return false/]
+[/#function]
+
+[#macro propertyInfo config]
+	[#if config.editable]
+        [#assign flag = true/]
+    [/#if]
+	 [#if  config.property.property == "student.qq"]
+	 	<div class="col-sm-12" style="line-height: 30px;padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-9">
+		        ${(student.qq)!}[#if !student.qqIsOpen??]-未设置[#elseif student.qqIsOpen?? && !student.qqIsOpen]-不公开
+	 		[#else][#if student.qRanges?? && student.qRanges?size > 0  ]-公开范围：[/#if][#list student.qRanges as p][#if p_index!=0],[/#if]${(p.name)!}[/#list]
+	 		[/#if]
+			</div>
+		</div>
+	 [#elseif config.property.property == "student.wechat"]
+	 	<div class="col-sm-12" style="line-height: 30px;padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-9">
+		        ${(student.wechat)!}[#if !student.wechatIsOpen??]-未设置[#elseif student.wechatIsOpen?? && !student.wechatIsOpen]-不公开
+	 		[#else][#if student.wRanges?? && student.wRanges?size > 0  ]-公开范围：[/#if][#list student.wRanges as p][#if p_index!=0],[/#if]${(p.name)!}[/#list]
+	 		[/#if]
+			</div>
+		</div>
+	[#elseif config.property.property == "student.countries"]
+	[#--国家地区--]
+		<div class="col-sm-6" style="line-height: 30px;">
+			<div class="col-sm-6" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		        ${(student.countries.gjdujc)!}
+			</div>
+		</div>
+	[#elseif config.property.property == "studentHome.domicilePlace"]
+	[#--户口所在地--]
+		<div class="col-sm-12" style="line-height: 30px;width='480px';padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-9">
+		        ${(studentHome.domicileCity.parent.name)!}${(studentHome.domicileCity.name)!}${(studentHome.domicilePlace.name)!} ${(studentHome.domicilePlaceAddress)!}
+			</div>
+		</div>
+	[#elseif config.property.property == "studentHome.domicilePlaceAddress"]
+	[#--户口详细地址
+		<div class="col-sm-6" style="line-height:30px;;padding:0px;">
+			<div class="col-sm-6" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-6" style="line-height:30px;width='480px'">
+		        ${(studentHome.domicilePlaceAddress)!}
+			</div>
+		</div>--]
+	[#elseif config.property.property == "studentHome.county"]
+	[#--家庭地址--]
+		<div class="col-sm-12" style="line-height: 30px;width='480px';padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-9">
+		        ${(studentHome.city.parent.name)!}${(studentHome.city.name)!}${(studentHome.county.name)!}${(studentHome.address)!}
+			</div>
+		</div>
+	[#elseif config.property.property == "student.county"]
+	[#--通讯地址--]
+		<div class="col-sm-12" style="line-height: 30px;width='480px';padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-9">
+		        ${(student.city.parent.name)!}${(student.city.name)!}${(student.county.name)!}${(student.address)!}
+			</div>
+		</div>
+	[#elseif config.property.property == "student.enrollCity"]
+	[#--何省市报考--]
+		<div class="col-sm-6" style="line-height: 30px;">
+			<div class="col-sm-6" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+	        	${(student.enrollProvince.name)!}
+			</div>
+		</div>
+	[#elseif config.property.property == "student.nativePlaceStr"]
+	[#--籍贯--]
+		<div class="col-sm-6" style="line-height: 30px;">
+			<div class="col-sm-6" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		        	${(student.nativePlaceStr.name)!}${(student.nativePlaceCity.name)!}
+			</div>
+		</div>
+	[#else]
+		<div class="col-sm-6" style="line-height: 30px;">
+			<div class="col-sm-6" style="text-align: right;">
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		        [@propertyInfoValue config/]
+			</div>
+		</div>
+	[/#if]
+[/#macro]
+
+[#macro propertyInfoValue config]
+    [#if config.property.property == "student.photo"]
+	<div style="height: 100px; overflow: hidden;">
+        [#if student.photo??]
+			<img style="max-height: 100px;" src="${base}/common/download.action?uuid=${(student.photo)!}"/>
+		[#else]
+			无
+        [/#if]
+	</div>
+    [#elseif  config.property.property == "studentEnroll.photo"]
+	<div style="height: 100px; overflow: hidden;">
+        [#if (studentEnroll.photo)??]
+			<img style="max-height: 100px;" src="${base}/common/download.action?uuid=${(studentEnroll.photo)!}"/>
+        [#else]
+			无
+        [/#if]
+	</div>
+	[#elseif  config.property.property == "student.countries"]
+		${(student.countries.gjdujc)!}
+	[#elseif  config.property.property == "student.oneCardStatus"]
+		${(student.oneCardStatus?string("已办理","未办理"))!}
+    [#else]
+    ${text(config.property.property)!}
+    [/#if]
+[/#macro]
+
+[#macro propertyEdit config]
+    [#assign property=config.property.property/]
+    [#assign validateClass = ""/]
+    [#if config.required]
+        [#assign validateClass = "v_required"/]
+    [/#if]
+    [#if property == "student.qq"]
+        [#assign validateClass = validateClass + " v_integer"/]
+    [#elseif  property == "student.phone"]
+        [#assign validateClass = validateClass + " v_phone"/]
+    [#elseif  property == "studentHome.zipcode"]
+        [#assign validateClass = validateClass + " v_zipcode"/]
+    [#elseif  property == "studentHome.zipcode"]
+        [#assign validateClass = validateClass + " v_zipcode"/]
+    [#elseif  property == "student.email"]
+        [#assign validateClass = validateClass + " v_email"/]
+    [/#if]
+    
+    [#if property == "studentEnroll.photo"]
+    	<script src="${base}/static/scripts/plupload-2.1.1/plupload.full.min.js"></script>
+		<script src="${base}/static/scripts/plupload-2.1.1/i18n/zh_CN.js"></script>
+		<div class="col-sm-6" style="line-height: 30px;min-height:34px;">
+			<div class="col-sm-6" style="text-align:right">录取时照片</div>
+			<div class="col-sm-6" >
+				<div style="height: 160px; overflow: hidden;">
+					<img id="albumImglq" src="${base}/common/download.action?uuid=${(studentEnroll.photo)!}" style="display: none; max-width: 300px; max-height: 200px;"/>
+					<input id="valueiptlq" type="hidden" name="studentEnroll.photo" value="${(studentEnroll.photo)!}" />
+				[#if config.editable]
+					<div style="">
+					    <a id="browselq" href="javascript:;">上传图片</a> 
+					<p stype="color: #737373;">文件大小限制：3MB,3cm*4.5cm,蓝底或白底标准证件照，格式：jpg,png</p>
+					</div>
+				[/#if]
+				</div>
+			</div>
+		</div>
+				<script type="text/javascript">
+				(function (){
+					[#if "${(studentEnroll.photo)!}" != '']
+						$("#albumImglq").show();
+					[/#if]
+					var uploader = new plupload.Uploader({
+						multi_selection: false,
+						file_data_name: "fileData",
+						filters: {
+						    mime_types : [
+						        { title : "Image files", extensions : "jpg,gif,png" }
+						    ]
+						},
+				        max_file_size :"3*1024kb",
+					    browse_button: 'browselq',
+					    url: "${base}/common/file!upload.action?dir=student/photo&type=uuid&width=300&zipImg=true"
+					});
+					
+					uploader.init();
+					
+					uploader.bind('FilesAdded', function(up, files) {
+						uploader.start();
+					});
+					uploader.bind('FileUploaded', function(up, file, res) {
+						var data = eval("(" + res.response + ")");
+						$("#albumImglq").attr("src", "${base}/common/download.action?uuid=" + data.uuid).show();
+						$("#valueiptlq").val(data.uuid);
+					});
+					uploader.bind('Error', function(up, msg) {
+						alert(msg.message);
+					});
+				})();
+				</script>
+    [#elseif property == "student.photo"]
+	    <script src="${base}/static/scripts/plupload-2.1.1/plupload.full.min.js"></script>
+		<script src="${base}/static/scripts/plupload-2.1.1/i18n/zh_CN.js"></script>
+		<div class="col-sm-6" style="line-height: 30px;min-height:34px;">
+			<div class="col-sm-6" style="text-align:right">
+			[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+				最近照片
+			</div>
+			<style>
+				hr, p {
+			      margin: 0 0;
+				}
+			</style>
+			<div class="col-sm-3" >
+				<div style="height: 150px; overflow: hidden;">
+				<img id="albumImg" src="${base}/common/download.action?uuid=${(student.photo)!}" style="display: none;max-height: 100px;"/>
+				<input id="valueipt" type="hidden" name="student.photo" value="${(student.photo)!}" requried="true"/>
+				<div style="padding-top: 7px;">
+					<a id="browse" href="javascript:;">上传图片</a> 
+				</div>
+				</div>
+			</div>
+			<div class="col-sm-3" >
+				[#if config.editable]
+					<div style="padding-top: 7px;">
+						<p style="color: #737373;">文件大小限制：3MB,3cm*4.5cm,蓝底或白底标准证件照，格式：jpg,png</p>
+					</div>
+				[/#if]
+				
+			</div>
+		</div>
+				<script type="text/javascript">
+				(function (){
+					[#if "${(student.photo)!}" != '']
+					$("#albumImg").show();
+					[/#if]
+					var uploader = new plupload.Uploader({
+						multi_selection: false,
+						file_data_name: "fileData",
+						filters: {
+						    mime_types : [
+						        { title : "Image files", extensions : "jpg,png" }
+						    ]
+						},
+				        max_file_size :"3*1024kb",
+					    browse_button: 'browse',
+					    url: "${base}/common/file!upload.action?dir=student/photo&type=uuid&width=300&zipImg=true"
+					});
+					
+					uploader.init();
+					
+					uploader.bind('FilesAdded', function(up, files) {
+						uploader.start();
+					});
+					uploader.bind('FileUploaded', function(up, file, res) {
+						var data = eval("(" + res.response + ")");
+						$("#albumImg").attr("src", "${base}/common/download.action?uuid=" + data.uuid).show();
+						$("#valueipt").val(data.uuid);
+					});
+					uploader.bind('Error', function(up, msg) {
+						alert(msg.message);
+					});
+				})();
+				</script>
+	[#elseif property == "studentHome.phone"]
+	[#--家庭电话--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+			 [#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		    	<input   name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]  class="v_match_lxdh">	
+			</div>
+		</div>
+	[#elseif property == "studentHome.zipcode"]
+	[#--家庭邮编--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		    	<input   name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="6" [#if config.required]required[/#if]  class="v_number">
+			</div>
+		</div>
+	[#elseif property == "studentContact.zipcode"]
+	[#--邮政编码--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		    	<input   name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="6" [#if config.required]required[/#if]  class="v_number">
+			</div>
+		</div>
+	[#elseif property == "studentContact.schoolEmail"]
+	[#--学校邮箱--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+			${text(config.property.property)!}
+			</div>
+		</div>
+	[#elseif property == "studentContact.email"]
+	[#--常用邮箱--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		    	<input   name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]  class="v_Email">
+			</div>
+		</div>
+	[#elseif property == "student.telephone"]
+	[#--联系电话--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		    	<input   name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]  class="v_match_lxdh">
+			</div>
+		</div>
+	[#elseif property == "student.height"]
+	[#--身高--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		    	<input   name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]  class="v_number">
+			</div>
+		</div>
+	[#elseif property == "student.weight"]
+	[#--体重--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		    	<input   name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]  class="v_number">
+			</div>
+		</div>
+	[#elseif property == "studentHome.domicilePlaceAddress"]
+	[#--户口详细地址--]
+		<div class="col-sm-12" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-3" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-9" style="padding-left:8px;">
+		    	<input  style="width:450px;" name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]>
+			</div>
+		</div>
+	[#elseif property == "student.qq"]
+		<div class="col-sm-12" style="line-height: 30px;padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+			[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+		    	QQ号
+			</div>
+			<div class="col-sm-3" style="text-align: right;">
+		    	<input id="qnumber" style="float: left;width:150px" name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if] class="v_number">
+						      
+			</div>
+			<div class="col-sm-3">
+		        <span id="qqText">[#if !student.qqIsOpen??]未设置[#elseif student.qqIsOpen?? && !student.qqIsOpen]不公开
+	 		[#else][#if student.qRanges?? && student.qRanges?size > 0  ]公开范围：[/#if]
+	 		[#list student.qRanges as p]
+		 		[#if p_index!=0]
+		 			,
+		 		[/#if]
+		 		${(p.name)!}
+	 		[/#list]
+	 		[/#if]</span>
+			</div>
+			<div class="col-sm-3">
+		       <input type="button" class="btn btn-primary" value="隐私设置" id="qq" />
+			</div>
+		</div>
+	[#elseif property == "student.wechat"]
+		<div class="col-sm-12" style="line-height: 30px;padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+			[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+		    	微信号
+			</div>
+			<div class="col-sm-3" style="text-align: right;">
+				<input id="wnumber" style="float: left;width:150px" name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if] >						      
+			</div>
+			<div class="col-sm-3">
+		        <span id="wechatText">[#if !student.wechatIsOpen??]未设置[#elseif student.wechatIsOpen?? && !student.wechatIsOpen]不公开[#else][#if student.wRanges?? && student.wRanges?size > 0  ]公开范围：[/#if]
+		 		[#list student.wRanges as p]
+			 		[#if p_index!=0]
+			 			,
+			 		[/#if]
+			 		${(p.name)!}
+		 		[/#list]
+	 		[/#if]</span>
+			</div>
+			<div class="col-sm-3">
+		       <input type="button" class="btn btn-primary" value="隐私设置" id="wechat" />
+			</div>
+		</div>          	
+	[#elseif property == "studentHome.domicilePlace"]
+	[#--户口所在地--]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+		    	[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+		    ${(config.name)!}
+			</div>
+			[#if config.editable]
+				[#assign validateClass = validateClass + " hk_city"/]
+				<div class="col-sm-6" >
+					[@fu.select name="" value=(studentHome.domicilePlace.id)!0 data=[] class="hk_pro" /]
+				</div>
+		</div>
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+				<div class="col-sm-6">
+					[@fu.select name="studentHome.domicileCity.id" value=(studentHome.domicileCity.id)!0 data=[] class=validateClass /]
+				</div>
+				<div class="col-sm-6" >
+					[@fu.select name="studentHome.domicilePlace.id" value=(studentHome.domicilePlace.id)!0 data=[] class="hk_county" /]
+				</div>
+				<script>
+				    $(function () {
+				        $("select.hk_pro").data("title", "省").dormLoadCampus(".hk_city").data("value", "${(studentHome.domicileCity.parent.id)!}");
+				        $("select.hk_city").data("title", "市").dormCascadeBuilding(".hk_county").data("value", "${(studentHome.domicileCity.id)!}");
+				        $(".hk_county").data("title", "县").data("value", "${(studentHome.domicilePlace.id)!}");
+				    });
+				</script>
+			[#else]
+	            ${(studentHome.domicileCity.parent.name)!}${(studentHome.domicileCity.name)!}${(studentHome.domicilePlace.name)!}
+	        [/#if]
+		</div>
+	[#elseif property == "studentHome.county"]
+	[#--家庭地址--]
+		<div class="col-sm-12" style="line-height: 30px;padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+		    	[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+		    ${(config.name)!}
+			</div>
+			[#if config.editable]
+				[#assign validateClass = validateClass + " jt_city"/]
+				<div class="col-sm-3" style="text-align: left;">
+					[@fu.select name="" value=(studentHome.county.id)!0 data=[] class="jt_pro" /]
+				</div>
+				<div class="col-sm-3">
+					[@fu.select name="studentHome.city.id" value=(studentHome.county.id)!0 data=[] class=validateClass  /]
+				</div>
+				<div class="col-sm-3" >
+					[@fu.select name="studentHome.county.id" value=(studentHome.county.id)!0 data=[] class="jt_county" /]
+				</div>
+				<script>
+				    $(function () {
+				        $("select.jt_pro").data("title", "省").dormLoadCampus(".jt_city").data("value", "${(studentHome.city.parent.id)!}");
+				        $("select.jt_city").data("title", "市").dormCascadeBuilding(".jt_county").data("value", "${(studentHome.city.id)!}");
+				        $(".jt_county").data("title", "县").data("value", "${(studentHome.county.id)!}");
+				    });
+				</script>
+			[#else]
+	            ${(studentHome.city.parent.name)!}${(studentHome.city.name)!}${(studentHome.county.name)!}
+	        [/#if]
+		</div>
+	[#elseif property == "student.county"]
+	[#--通讯地址--]
+		<div class="col-sm-12" style="line-height: 30px;padding:0px;">
+			<div class="col-sm-3" style="text-align: right;">
+		    	[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+		    ${(config.name)!}
+			</div>
+			[#if config.editable]
+				[#assign validateClass = validateClass + " tx_city"/]
+				<div class="col-sm-3" style="text-align: left;">
+					[@fu.select name="" value=(student.county.id)!0 data=[] class="tx_pro" /]
+				</div>
+				<div class="col-sm-3">
+					[@fu.select name="student.city.id" value=(student.city.id)!0 data=[] class=validateClass  /]
+				</div>
+				<div class="col-sm-3" >
+					[@fu.select name="student.county.id" value=(student.county.id)!0 data=[] class="tx_county" /]
+				</div>
+				<script>
+				    $(function () {
+				        $("select.tx_pro").data("title", "省").dormLoadCampus(".tx_city").data("value", "${(student.city.parent.id)!}");
+				        $("select.tx_city").data("title", "市").dormCascadeBuilding(".tx_county").data("value", "${(student.city.id)!}");
+				        $(".tx_county").data("title", "县").data("value", "${(student.county.id)!}");
+				    });
+				</script>
+			[#else]
+	            ${(student.city.parent.name)!}${(student.city.name)!}${(student.county.name)!}
+	        [/#if]
+		</div>
+	[#elseif property == "student.enrollProvince"]
+		[#--何省市报考--]
+		[#--研究生--]
+			<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+				<div class="col-sm-6" style="text-align: right;">
+			    	[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+			    ${(config.name)!}
+				</div>
+				<div class="col-sm-6">
+					[#if config.editable]
+						[#assign validateClass = validateClass + " sh_city"/]
+						[@fu.select name="student.enrollProvince.id" value=(student.enrollProvince.id)!0 data=[] class=validateClass /]
+						<script>
+						    $(function () {
+						        $("select.sh_city").data("title", "省").dormLoadCampus(".sh_county").data("value", "${(student.enrollProvince.id)!}");
+						    });
+						</script>
+					[#else]
+			            ${(student.enrollProvince.name)!}
+			        [/#if]
+			        [#--<input type="button" class="btn btn-primary" value="说明" id="remark" style="width:50px"/>--]
+		        </div>
+		     </div>
+	
+	[#elseif property == "student.nativePlaceStr"]
+    [#--籍贯--]
+    	<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+		    	[#if config.editable && config.required]<span class="requried">*</span>[/#if]
+		    ${(config.name)!}
+			</div>
+			[#if config.editable]
+				[#assign validateClass = validateClass + " natCity"/]
+				<div class="col-sm-6" style="text-align: left;">
+					[@fu.select name="student.nativePlaceStr.id" value=(student.nativePlaceStr.id)!0 data=[] class="natPro" /]
+				</div>
+				</div>
+				
+    			<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+					<div class="col-sm-6">
+						[@fu.select name="student.nativePlaceCity.id" value=(student.nativePlaceCity.id)!0 data=[] class=validateClass  /]
+					</div>
+					<div class="col-sm-6">
+					</div>
+					<script>
+					    $(function () {
+					        $("select.natPro").data("title", "省").nativeLoadPro(".natCity").data("value", "${(student.nativePlaceStr.id)!}");
+					        $("select.natCity").data("title", "市").data("value", "${(student.nativePlaceCity.id)!}");
+					    });
+					</script>
+			[#else]
+				<div class="col-sm-6">
+	            	${(student.nativePlaceStr.name)!}${(student.nativePlaceCity.name)!}
+	            </div>
+	        [/#if]
+	      </div>
+	      
+	[#elseif property == "student.address"]
+	[#--户口详细地址--]
+		<div class="col-sm-12" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-3" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-9" style="padding-left:8px;">
+		    	<input  style="width:450px;" name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]>
+			</div>
+		</div>
+	[#elseif property == "studentHome.address"]
+	[#--户口详细地址--]
+		<div class="col-sm-12" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-3" style="text-align: right;">
+				[#if config.editable && config.required]<span class="requried">*</span>[/#if]${(config.name)!}
+			</div>
+			<div class="col-sm-9" style="padding-left:8px;">
+		    	<input  style="width:450px;" name="${config.property.property}" value="${text(config.property.property)!}"
+				maxlength="${config.property.length!30}" [#if config.required]required[/#if]>
+			</div>
+		</div>
+	[#else]
+		<div class="col-sm-6" style="line-height: 30px; min-height: 34px;">
+			<div class="col-sm-6" style="text-align: right;">
+		        [#if config.editable && config.required]<span class="requried">*</span>[/#if]
+		    ${(config.name)!}
+			</div>
+			<div class="col-sm-6">
+		        [#if config.editable]
+		            [#if property == "student.birthday"]
+		            [#--生日--]
+						<input name="student.birthday" value="${(student.birthday?date)!}" class="datepicker ${validateClass}" />
+		            [#elseif property == "studentInfo.politicalStatus"]
+		            [#--政治面貌--]
+		                [@fu.select name="studentInfo.politicalStatus.id" value=(studentInfo.politicalStatus.id)!0 data=politicals class=validateClass /]
+		            [#elseif property == "student.countries"]
+		            [#--国家地区--]
+		                [@fu.select2 name="student.countries.id" value=(student.countries.id)!0 data=gjdqs class=validateClass id="countries" /]
+		            [#elseif property == "student.sourceType"]
+		            [#--考生来源--]
+		                [@fu.select name="student.sourceType.id" value=(student.sourceType.id)!0 data=sourceTypes class=validateClass /]
+		            [#elseif property == "student.studentType" ]
+					[#--学生类别--]
+			    		[@fu.select name="student.studentType.id" value=(student.studentType.id)!0 data=studentTypes class=validateClass /]
+		            [#elseif property == "studentInfo.maritalStatus"]
+		            [#--婚姻状况--]
+		                [@fu.select name="studentInfo.maritalStatus.id" value=(studentInfo.maritalStatus.id)!0 data=hyzks class=validateClass /]
+		            [#elseif property == "studentInfo.language" ]
+					[#--外语语种--]
+				   		[@fu.select name="studentInfo.language" value=(studentInfo.language)! data=wyyzs valueKey="name" class=validateClass  /]
+				    [#elseif property == "studentInfo.languageLevel" ]
+				    [#--外语水平--]
+   						[@fu.select name="studentInfo.languageLevel.id" value=(studentInfo.languageLevel.id)!0 data=wysps class=validateClass  /]
+		            [#elseif property == "studentInfo.computerLevel"]
+				    [#--计算机水平--]
+				    	[@fu.select name="studentInfo.computerLevel.id" value=(studentInfo.computerLevel.id)!0 data=computerLevels class=validateClass style="width:150px;" /]
+		            [#elseif property == "studentInfo.nation"]
+		            [#--民族--]
+		                [@fu.select name="studentInfo.nation.id" value=(studentInfo.nation.id)!0 data=nations class=validateClass /]
+		            [#elseif property == "student.faith"]
+		            [#--宗教信仰--]
+		                [@fu.select name="student.faith.id" value=(student.faith.id)!0 data=faiths class=validateClass /]
+		            [#elseif property == "studentInfo.health"]
+		            [#--健康状况--]
+		                [@fu.select name="studentInfo.health.id" value=(studentInfo.health.id)!0 data=healths class=validateClass /]
+		            [#elseif property == "studentInfo.hmto"]
+		            [#--是否澳台--]
+		                [@fu.radios name="studentInfo.hmto" value=(studentInfo.hmto?string("1", "0"))!"0"
+		                	data=[{"id":"1", "name":"是"}, {"id":"0", "name":"否"}] class=validateClass/]
+		            [#elseif property == "student.isFullTime"]
+		            [#--是否全日制--]
+		                [@fu.radios name="student.isFullTime" value=(student.isFullTime?string("1", "0"))!"0"
+		                	data=[{"id":"1", "name":"是"}, {"id":"0", "name":"否"}] class=validateClass/]
+		            [#elseif property == "student.degreeType"
+		            ||  property == "student.department"
+		            ||  property == "student.major"
+		            ||  property == "student.direction"
+		            ||  property == "student.adminClass"
+		            ||  property == "student.enrollmentDate"
+		            ||  property == "student.duration"
+		            ||  property == "student.campus"
+		            ||  property == "student.gender"]
+		                [@propertyInfoValue config/]
+		            [#elseif property == "student.oneCardStatus"]
+				    [#--一卡通办理状态--]
+				        [@fu.select name="student.oneCardStatus" value=(student.oneCardStatus?string("1", "0"))!"0" 
+				        	data=[{"id":"1", "name":"已办理"}, {"id":"0", "name":"未办理"}] class=validateClass/]
+		            [#elseif property == "student.cardType" ]
+				    [#--证件类型--]
+				    	[@fu.select name="student.cardType" value=(student.cardType)!"" data=[{"id":"身份证", "name":"身份证"}, {"id":"其它", "name":"其它"}] class=validateClass/]
+				   	[#else]
+						<input name="${config.property.property}" value="${text(config.property.property)!}"
+						       maxlength="${config.property.length!30}" [#if config.required]required[/#if] >
+		            [/#if]
+		        [#else]
+		            [@propertyInfoValue config/]
+		        [/#if]
+			</div>
+		</div>
+	[/#if]
+[/#macro]

@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+.color-demo .color-view{ padding:0; font-size:14px; text-align:center;}
+.color-demo{ padding:0 20px 20px;}
+.timeline .timeline-body{ margin-top:0;}
+.timeline:before{top:75px;}
+.timeline .timeline-body .bg-white{margin:0;}
+.table.table-striped.table-bordered>tbody>tr>td.table_padding_42{ padding-left:42px; padding-right:42px;}

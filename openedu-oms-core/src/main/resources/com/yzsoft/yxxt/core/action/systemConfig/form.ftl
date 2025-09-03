@@ -1,0 +1,12 @@
+[#ftl]
+[@b.head/]
+[@b.form action="!save" title="参数设置" theme="form"]
+    [@b.textfield label="当前年度" name="systemConfig.year" value=systemConfig.year required="true" maxlength="4" iclass="v_year"/]
+    [@b.radios label="是否有院系" name="systemConfig.hasDepartment" value=systemConfig.hasDepartment required="true" items="1:是,0:否"/]
+    [@b.textfield label="部门名称" name="systemConfig.departmentName" value=systemConfig.departmentName required="true"/]
+    [@b.formfoot]
+        <input type="hidden" name="systemConfig.id" value="${systemConfig.id!}"/>
+        [@b.submit value="action.submit"/]
+    [/@]
+[/@]
+[@b.foot/]

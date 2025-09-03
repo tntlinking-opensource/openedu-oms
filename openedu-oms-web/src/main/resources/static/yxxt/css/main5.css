@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.page-content-wrapper .page-content { padding:0;}
+
+.portlet{ margin-bottom:0; margin:0px; /* border:1px solid #dad7d4;*/}
+
+.user_style{ float:left; width:70%; padding:8px;}
+.user_style p.user_style_p{ margin:0; font-size:18px; font-weight:bold; color:#333; padding-left:25px; font-family: "微软雅黑"; margin-bottom:15px;}
+.user_style span.user_style_span{ font-size:14px;  color:#333; padding-left:25px; font-family: "微软雅黑";}
+.carousel-indicators { bottom: 0px }
+.carousel-indicators .active{ background-color:#e60012;}
+
+
+.zt_img{ display:block; float:left; width:17px; margin-right:5px;}
+
+.carousel-indicators{ left:0; margin-left:0; width:100%; bottom:0px;}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img { min-height:206px;}
+
+.new_style{ font-family: "微软雅黑"; font-size:20px; color:#666666; margin-left:5px; }
+
+
+.border_style_01{ border-left:4px solid #e50013}
+
+.date_right{ font-family: "微软雅黑"; font-size:13px; color:#808080; float:right;}
+.font-lg{ font-size:14px; }
+.list-group-item{ background-color:inherit;  border:none;}
+.list-group-item_1{border-bottom: 1px dashed #c3c3c3;}
+
+
+.lc_bg_01{ background:url(liucheng_bg_1.png) no-repeat; width:243px; height:145px; float: left;}
+.lc_bg_02{ background:url(liucheng_bg_2.png) no-repeat; width:243px; height:145px; float: left;}
+.lc_bg_03{ background:url(liucheng_bg_3.png) no-repeat; width:243px; height:145px; float: left;}
+.lc_bg_04{ background:url(liucheng_bg_4.png) no-repeat; width:161px; height:145px; float: left;}
+.lc_font{ font-family: "微软雅黑"; font-size:16px; color:#fff; font-weight:bold; padding-top:15px; padding-left:32px; float:left;}
+.lc_dh_1{ background:url(liucheng_dh_1.png) no-repeat; width:84px; height:84px; float: left;}
+
+.bg_colour_4{ background:url(../images/footer_bg.png) center; }
+
+.table_font{ font-family: "微软雅黑"; font-size:12px !important;  color:#333;}
+
+
+.form-horizontal .control-label{ padding-top:6px;}
+.font_size_style{ font-size:16px;}
+.profession_font{ font-family: "微软雅黑"; font-size:16px; margin:5px;}
+
+
+.icon_box_width{ width:14%;}
+.icon_font{ font-family:"微软雅黑"; font-size:16px; text-align:center; margin-top:5px; color:#333333;}
+.links_img{ background:url(../images/links_img.png) no-repeat; float:right; width:22px; height:22px;}

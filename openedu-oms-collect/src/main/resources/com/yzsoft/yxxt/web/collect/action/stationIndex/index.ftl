@@ -1,0 +1,7 @@
+[#ftl]
+[@b.navmenu title="到达情况设置" target="station_div"]
+    [@b.navitem title="到达站设置" href="/web/collect/station-manager"/]
+    [@b.navitem title="到达时间设置" href="/web/collect/station-date-manager"/]
+    [@b.navitem title="不按时报到原因设置" href="/web/collect/station-reason-manager"/]
+[/@]
+[@b.div id="station_div"/]

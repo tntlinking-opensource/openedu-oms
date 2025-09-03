@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*头部导航*/
+ul.dropdown                         { float:left;list-style:none;margin-left:-38px; margin-top:0;}
+ul.dropdown li                      {  float: left; zoom: 1; text-align:center;   }
+ul.dropdown li:hover                { position: relative; }
+ul.dropdown .first_li{line-height:30px; margin-top:10px;}
+ul.dropdown .first_li .first_a{ display:inline-block; font-size:14px; color:#FFF;text-decoration:none; padding:0px 8px;}
+ul.dropdown .first_li .current_hit{background:#00a0e9;color:#FFF; }
+ul.dropdown .first_li .first_a:hover{background:#00a0e9;color: #FFF;}
+
+/*系统框架*/
+body{background-color:#f2f2f2;background-image:url(../yz_img/dw-fj_05.png);background-repeat:no-repeat;background-position:bottom center;background-size:100%;}
+.page-content-wrapper{background-color:transparent; margin-bottom:20px;}
+.page-content-wrapper .page-content{margin-top:0px; background-color:#ffffff;border:1px solid #dfdfdf;}
+.page-header.navbar{background:url(../yz_img/dw-bg_01.jpg) repeat-x;}
+.page-header.navbar .page-logo .logo-default{margin:4px 0 0 0; max-width:200px;}
+.page-sidebar{background-color:#FFF;margin-top:0;}
+.page-sidebar .page-sidebar-menu>li.active>a{background-color:#dfdfdf;color:#10609e;}
+.page-sidebar .page-sidebar-menu>li.active>a:hover{background-color:#dfdfdf;color:#10609e;}
+.page-sidebar .page-sidebar-menu>li>a{color:#333333;}
+.page-sidebar .page-sidebar-menu>li>a:hover{background-color:#dfdfdf;color:#10609e;}
+.page-sidebar .page-sidebar-menu li.active>a>.arrow.open:before, .page-sidebar .page-sidebar-menu li.active>a>.arrow:before, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu li.active>a>.arrow.open:before, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu li.active>a>.arrow:before{color:#10609e;}
+.page-sidebar .page-sidebar-menu>li.active.open>a, .page-sidebar .page-sidebar-menu>li.active>a{background-color:#dfdfdf;color:#10609e;}
+.page-sidebar .page-sidebar-menu>li.active.open>a:hover, .page-sidebar .page-sidebar-menu>li.active>a:hover{background-color:#dfdfdf;color:#10609e;}
+.page-sidebar .page-sidebar-menu .sub-menu>li>a{color:#666666;}
+.page-sidebar .page-sidebar-menu .sub-menu>li>a:hover{background-color:#e6e6e6;}
+.page-sidebar .page-sidebar-menu .sub-menu>li:hover>a{background:#e6e6e6!important;}
+.page-content-white .page-bar{background-color:#f2f2f2;}
+.page-content-white .page-bar.lujing{ margin-left:235px;}
+.theme-panel>.tuichu { right: 0; position: absolute;}
+.theme-panel>.tuichu{padding:8px;top:4px; cursor: pointer;font-size:18px;color:#FFF; }
+.page-footer{background:url(../yz_img/dw-bg_01.jpg) repeat-x;padding:12px 20px;height:50px;}
+.page-footer .page-footer-inner{color:#fff;line-height:250%;}
+.row{margin:0 5px;}
+
+
+

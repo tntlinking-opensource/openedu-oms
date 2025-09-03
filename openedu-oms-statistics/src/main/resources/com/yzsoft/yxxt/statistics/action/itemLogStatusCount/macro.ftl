@@ -1,0 +1,10 @@
+[#ftl]
+
+[#function getMajorItem major item]
+    [#list major.items as v]
+        [#if v.name == item]
+            [#return v/]
+        [/#if]
+    [/#list]
+    [#return emptyItem/]
+[/#function]

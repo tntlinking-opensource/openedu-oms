@@ -1,0 +1,8 @@
+[#ftl]
+[@b.head/]
+[@b.form name="welcomeLinkSearchForm"  action="!search" target="welcomeLinklist" title="ui.searchForm" theme="search"]
+	[@b.textfields names="welcomeLink.name;名称"/]
+    [@b.select name="welcomeLink.enabled" label="状态" value="" empty="..." items={'1':'启用','0':'禁用'}/]
+[/@]
+[@b.div id="welcomeLinklist" href="!search" /]
+[@b.foot/]

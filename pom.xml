@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yzsoft.oms</groupId>
+    <artifactId>openedu-oms</artifactId>
+    <version>1.3.4</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>openedu-oms-collect</module>
+        <module>openedu-oms-core</module>
+        <module>openedu-oms-finance-demo</module>
+        <module>openedu-oms-generate</module>
+        <module>openedu-oms-mobile</module>
+        <module>openedu-oms-prepare</module>
+        <module>openedu-oms-statistics</module>
+        <module>openedu-oms-web</module>
+        <module>openedu-oms-welcome</module>
+        <module>openedu-oms-main</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
+        <beangle.version>3.3.7</beangle.version>
+        <beangle.view.version>3.3.6</beangle.view.version>
+        <bpcg.version>1.2.6</bpcg.version>
+        <bpcg.student.version>1.1.0</bpcg.student.version>
+        <bpcg.print.version>1.1.4</bpcg.print.version>
+        <process.version>1.0.6</process.version>
+        <dormitory.version>1.3.0</dormitory.version>
+        <druid.version>1.0.9</druid.version>
+        <barcode4j.version>2.1</barcode4j.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>yanzhisoft</id>
+            <url>http://yanzhisoft.vicp.cc:8099/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>apache.nexus</id>
+            <name>ASF Nexus Staging</name>
+            <url>https://repository.apache.org/content/groups/staging/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://yanzhisoft.vicp.cc:8099/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://yanzhisoft.vicp.cc:8099/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.beangle</groupId>
+            <artifactId>beangle-core</artifactId>
+            <version>${beangle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.beangle</groupId>
+            <artifactId>beangle-static</artifactId>
+            <version>${beangle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.beangle</groupId>
+            <artifactId>beangle-struts2-view-bootstrap</artifactId>
+            <version>${beangle.view.version}</version>
+        </dependency>
+        <!--基础产品核心包-->
+        <dependency>
+            <groupId>com.yzsoft.bpcg</groupId>
+            <artifactId>bpcg-manager</artifactId>
+            <version>${bpcg.version}</version>
+        </dependency>
+        <!--套打-->
+        <dependency>
+            <groupId>com.yzsoft.bpcg</groupId>
+            <artifactId>bpcg-print</artifactId>
+            <version>${bpcg.print.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yzsoft.bpcg</groupId>
+            <artifactId>bpcg-student</artifactId>
+            <version>${bpcg.student.version}</version>
+        </dependency>
+        <!--流程包-->
+        <dependency>
+            <groupId>org.beangle.process</groupId>
+            <artifactId>beangle-process-manager</artifactId>
+            <version>${process.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.beangle.process</groupId>
+            <artifactId>beangle-process-model</artifactId>
+            <version>${process.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.barcode4j</groupId>
+            <artifactId>barcode4j</artifactId>
+            <version>${barcode4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

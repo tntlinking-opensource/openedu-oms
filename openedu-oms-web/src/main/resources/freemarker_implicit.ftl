@@ -1,0 +1,7 @@
+[#ftl]
+[#-- @implicitly included --]
+[#-- @ftlroot "../resources/templates" --]
+[#--[#import "/macro.ftl" as m]--]
+[#--[#import "/macroIndex.ftl" as mi]--]
+[#--[#import "/macroList.ftl" as ml]--]
+[#--[#import "/macroForm.ftl" as mf]--]

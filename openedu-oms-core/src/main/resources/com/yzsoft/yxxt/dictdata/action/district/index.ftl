@@ -1,0 +1,7 @@
+[#ftl]
+[@b.head/]
+[@b.form name="dictDataSearchForm"  action="!search" target="dictDatalist" title="ui.searchForm" theme="search"]
+    [@b.textfield label="名称" name="dictData.name"/]
+[/@]
+[@b.div id="dictDatalist" href="!search" /]
+[@b.foot/]

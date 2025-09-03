@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+.portlet.light.portlet-fit > .portlet-title { padding: 0px;}     
+.portlet.light > .portlet-title{ min-height:40px;}  
+/* .portlet.light > .portlet-title > .caption{ padding:0px; height:40px; line-height:40px; text-align:center; width:100%; border-top:2px solid #e0e1e2;} */
+.portlet.light > .portlet-title > .caption2{ padding:0px; height:40px; line-height:40px; text-align:center; width:100%; border-top:2px solid #e0e1e2;}
+.mt-widget-1{ border:none;}
+.mt-widget-1 .mt-img{ border:none; margin:0px;}
+.mt-widget-2{ border:none;}
+.mt-widget-2 .mt-body-stats{ padding:0px;}
+.mt-widget-2 .mt-body-stats > li{margin:15px; list-style:none; font-size:16px; color:#6fb88d;}
+.red_font_01{ color:#f03838; font-size:16px;}
+.green_font_01{ color:#6fb88d; font-size:16px; margin:10px 0;}
+
+.padding-0{ padding:0px;}
+.margin_style_01{ margin-top:12px; margin-bottom:12px;}
+.hover_1:hover{ background-color:#0F3;}
+.margin-right-30{ margin-right:30px;}
+
+/*.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{ border:1px solid #ddd !important; border-bottom-color: transparent !important;}*/
+/*.nav-pills, .nav-tabs{ background:#DEF0FA;}*/
+
+.modal-content .portlet.box.green>.portlet-title, .portlet.green, .portlet>.portlet-body.green{ background-color:#DEF0FA;}
+.modal-content .portlet.box.green{ border:1px solid #DEF0FA;}
+.modal-content .portlet>.portlet-title>.nav-tabs>li>a{ color:#666;}
+.modal-content .portlet.box.green .nav-tabs > li.active > a{ border:none;}
+
+.modal-content .portlet>.portlet-title>.nav-tabs{ float:left;}
+.lixuedan_style{ text-align:center; color:#F0A878;  border:1px solid #e7ecf1;}
+.mt-checkbox-list, .mt-radio-list{padding-bottom: 0;}
+.form-horizontal .form-group .mt-checkbox-list, .form-horizontal .form-group .mt-radio-list{padding-top: 7px;}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {
+    .table td.lixuedan_style p{font-size:34px; margin:5px 0;}
+}
+@media screen and (min-width:1201px) {
+	.table td.lixuedan_style p{font-size:40px; margin:5px 0;}
+}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {
+    .portlet.light.portlet-fit{height:220px;}
+}
+@media screen and (min-width:1201px) {
+	.portlet.light.portlet-fit{height:170px;}
+}

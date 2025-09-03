@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="com.yzsoft.yxxt.prepare.model.Batch"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.MajorPlan"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.PrepareConfig"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentContact"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentEnroll"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentLeave"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentLeaveView"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentMajor"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentMajorConfig"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentMajorDetail"/>
+        <!--<mapping class="com.yzsoft.yxxt.prepare.model.StudentPrepare"/>-->
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentPrint"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentPrintView"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentScore"/>
+        <!--studentclass-->
+        <mapping class="com.yzsoft.yxxt.prepare.model.AdminClassRule"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.AdminClassTemp"/>
+        <mapping class="com.yzsoft.yxxt.prepare.model.StudentClass"/>
+    </session-factory>
+</hibernate-configuration>

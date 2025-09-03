@@ -1,0 +1,50 @@
+[#ftl]
+[#include "macro.ftl"/]
+<div id="lineChart" style="height:500px;"></div>
+<script type="text/javascript">
+	$(function () {
+		// 基于准备好的dom，初始化echarts实例
+		var myChart = echarts.init(document.getElementById('lineChart'));
+		// 指定图表的配置项和数据
+		var option = {
+			tooltip: {
+				trigger: 'axis'
+			},
+			[#if data.names?size lt 10]
+			legend: {
+				data: [[#list data.names as v]'${v}', [/#list]]
+			},
+			[/#if]
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			xAxis: {
+				type: 'category',
+				boundaryGap: false,
+				data: [[#list data.years as v]'${v}', [/#list]]
+			},
+			yAxis: {
+				type: 'value'
+			},
+			series: [
+				[#list data.names as name]
+				{
+					name: '${name}',
+					type: 'line',
+					data: [[#list data.years as year]${getData(year, name)}, [/#list]]
+				},
+				[/#list]
+			]
+		};
+		// 使用刚指定的配置项和数据显示图表。
+		myChart.setOption(option);
+	});
+</script>

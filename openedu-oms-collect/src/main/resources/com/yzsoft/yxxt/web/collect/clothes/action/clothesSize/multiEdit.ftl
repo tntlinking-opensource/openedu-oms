@@ -1,0 +1,16 @@
+[#ftl]
+[@b.head/]
+[@b.toolbar title="尺码批量添加"]bar.addBack();[/@]
+[@b.form action="!multiSave" title="尺码" theme="form"]
+    [@b.textfield label="代码" name="code" maxlength="50"/]
+    [@b.textfield label="值1" name="value" maxlength="200"/]
+    [@b.textfield label="值2" name="values" required="true" maxlength="200"/]
+    [@b.textfield label="名称" name="names" required="true" maxlength="200"/]
+    [@b.formfoot]
+    <input type="hidden" name="clothesSize.type.id" value="${(clothesSize.type.id)!}"/>
+    <input type="hidden" name="typeId" value="${typeId}"/>
+        [@b.redirectParams/]
+        [@b.reset/]&nbsp;&nbsp;[@b.submit value="action.submit"/]
+    [/@]
+[/@]
+[@b.foot/]

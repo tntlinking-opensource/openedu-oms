@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.sq_icon_bg{ padding:6px 6px; color:#fff;}
+#sjz_main{  -moz-border-radius:12px;-khtml-border-radius: 12px;-webkit-border-radius: 12px; border-radius:12px;}
+h2.top_title{margin:4px 20px; padding-top:15px; padding-left:20px; padding-bottom:10px; border-bottom:1px solid #d3d3d3; font-size:18px; color:#a84c10; background:url(../images/arrL.gif) no-repeat 2px 14px}
+#timeline {overflow: hidden;position: relative; background:url(../yz_img/dot.gif) left 30px repeat-x;}
+#dates {overflow: hidden; margin-bottom:0px; padding:0px; float:left;}
+#dates li {list-style: none;float: left;font-size: 14px;text-align: center;background: url(../yz_img/biggerdot.png) center top 24px no-repeat; padding:0px 15px 0px 15px;}
+#dates li.sjz_year{ background: url(../yz_img/sjz_year.png) no-repeat left 0px top 5px;height:58px; }
+#dates li.sjz_year p{  line-height:61px; margin:0px; margin-left:-6px; color:#fff;}
+#dates a {line-height: 38px;padding-bottom: 10px;}
+#dates .selected {font-size: 38px;}
+#issues {overflow: hidden;}	
+#issues li list-style: none;float: left;}
+#issues li h1 {color: #ffcc00;font-size: 42px;margin: 20px 0;text-shadow: #000 1px 1px 2px;}
+#issues li p {font-size: 14px;margin-right: 70px; margin:10px; font-weight: normal;line-height: 22px; width:50px;}

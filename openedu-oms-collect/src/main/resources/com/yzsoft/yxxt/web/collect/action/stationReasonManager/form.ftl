@@ -1,0 +1,12 @@
+[#ftl]
+[@b.head/]
+[@b.toolbar title="不按时报到原因" entityId=stationReason.id!0]bar.addBack();[/@]
+[@b.form action="!save" theme="form"]
+    [@b.textfield label="名称" name="stationReason.name" value="${stationReason.name!}" required="true" maxlength="30"/]
+    [@b.formfoot]
+	<input type="hidden" name="stationReason.id" value="${stationReason.id!}"/>
+        [@b.redirectParams/]
+        [@b.reset/]&nbsp;&nbsp;[@b.submit value="action.submit"/]
+    [/@]
+[/@]
+[@b.foot/]

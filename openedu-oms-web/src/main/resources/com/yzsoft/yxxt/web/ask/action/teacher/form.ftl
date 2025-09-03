@@ -1,0 +1,16 @@
+[#ftl]
+[#import "/template/form/utils.ftl" as fu/]
+[@b.head/]
+[@b.toolbar title="在线咨询回复"]bar.addBack();[/@]
+[@b.form action="!save" theme="form"]
+    [@fu.text label="咨询内容"]${askStudent.content!}[/@fu.text]
+    [@b.textarea label="回复内容" name="askStudent.replyContent" value="${askStudent.code!}"
+        required="true" maxlength="300"/]
+    [@b.radios label="可见范围" name="askStudent.scope" value=askStudent.scope items="1:学生,2:院系"/]
+    [@b.formfoot]
+    <input type="hidden" name="askStudent.id" value="${askStudent.id!}"/>
+        [@b.redirectParams/]
+        [@b.submit value="action.submit"/]
+    [/@]
+[/@]
+[@b.foot/]

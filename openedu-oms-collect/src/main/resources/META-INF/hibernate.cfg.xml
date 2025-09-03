@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--collect-->
+        <mapping class="com.yzsoft.yxxt.web.collect.model.ClothesSize"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.ClothesStudent"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.CollectSwitch"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.CollectSwitchState"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.CollectSwitchStateView"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.FinanceGreenStd"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.MajorInfo"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.ShoesSize"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.Station"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.StationDate"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.StationReason"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.StationStudent"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.StationTime"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.StudentInfoCollectState"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.Supplies"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.SuppliesStd"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.model.SuppliesStdItem"/>
+        <!--clothes-->
+        <mapping class="com.yzsoft.yxxt.web.collect.clothes.model.ClothesSize"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.clothes.model.ClothesStudent"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.clothes.model.ClothesStudentSize"/>
+        <mapping class="com.yzsoft.yxxt.web.collect.clothes.model.ClothesType"/>
+    </session-factory>
+</hibernate-configuration>

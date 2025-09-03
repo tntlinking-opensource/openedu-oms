@@ -1,0 +1,2 @@
+label.error { color: red; margin: 5px 0; }
+label.error.valid { display: none !important; }

@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--core-->
+        <mapping class="com.yzsoft.yxxt.core.model.SystemConfig"/>
+        <!--finance-->
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceGreen"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceGreenItem"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceGreenStudent"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceGreenStudentItem"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceItem"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceOrder"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceOrderItem"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceStudent"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceStudentItem"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceTemplate"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.FinanceTemplateItem"/>
+        <mapping class="com.yzsoft.yxxt.finance.model.DormSetting"/>
+
+        <mapping class="com.yzsoft.yxxt.msg.model.Message"/>
+        <mapping class="com.yzsoft.yxxt.msg.model.MessageGroup"/>
+        <mapping class="com.yzsoft.yxxt.msg.model.MessageTemp"/>
+        <!-- dormitory -->
+        <mapping class="org.beangle.product.core.model.School"/>
+    </session-factory>
+</hibernate-configuration>

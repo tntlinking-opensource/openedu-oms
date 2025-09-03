@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*学生个人信息设置*/
+.dh-bar-title{color:#10609e; font-size:14px;margin:0;padding:0 0 10px;border-bottom:2px solid #10609e;}
+.tabbable-line>.nav-tabs>li.active{border-bottom:4px solid #105f9a;}
+.tabbable-line>.nav-tabs>li:hover{border-bottom:4px solid #105f9a;}
+.tabbable-line>.nav-tabs>li.active>a{color:#105f9a;}
+.tabbable-line>.nav-tabs>li>a{color:#343434;}
+.tabbable-line>.tab-content{border-top:none;}
+
+.spc_form {margin: auto; }
+.spc_form .form-group { margin-bottom: 0; padding:5px 0; }
+.spc_form .type_name { display: none; }
+.spc_form .form-group .glyphicon { vertical-align: middle; cursor: move; padding: 7px 0 0 10px; }
+.ui-sortable-placeholder { outline: 1px solid red; box-shadow: 0 0 5px red; height: 25px; }
+.ui-sortable-helper { outline: 1px solid blue; box-shadow: 0 0 5px blue; background-color: #fff; }
+.spc_configs { min-height: 50px; }
+.panel{border:none;}
+.panel-body{padding:0;}
+.panel-default>.panel-heading{color:#0d5da2;border-color:#0d5da2;background-color:#FFF;}
+.panel-heading{border-bottom:2px solid transparent;padding:4px 0;}
+.handlebtn .btn:not(.btn-sm):not(.btn-lg){line-height:1.2;}
+.handlebtn .btn{margin-left:10px;}
+.spc-form-input{padding:0;margin-top:4px;text-align:right;}
+.clickpanel{text-align:right;}
+.clickpanel .type_name{margin-top:6px; width:108px;}

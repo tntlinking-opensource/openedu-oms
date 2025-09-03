@@ -1,0 +1,7 @@
+[#ftl]
+[@b.head/]
+[@b.form name="askStudentSearchForm"  action="!search" target="askStudentlist" title="ui.searchForm" theme="search"]
+    [@b.textfield label="咨询内容" name="askStudent.content"/]
+[/@]
+[@b.div id="askStudentlist" href="!search" /]
+[@b.foot/]

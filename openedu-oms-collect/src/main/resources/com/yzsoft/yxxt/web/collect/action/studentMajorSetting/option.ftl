@@ -1,0 +1,13 @@
+[#ftl]
+[@b.head/]
+[@b.toolbar title="参数设置"]bar.addBack();[/@]
+[@b.form action="!optionSave" theme="form"]
+    [@b.textfield label="学生选择专业数量" name="config.num" value=config.num class="v_integer" required="true" maxlength="1" check="range(1,6)"/]
+    [@b.radios label="是否显示服从调剂" name="config.showAdjust" value=config.showAdjust items="1:是,0:否" required="true"/]
+    [@b.formfoot]
+        [@b.redirectParams/]
+        <input type="hidden" name="config.id" value="${(config.id)!}"/>
+        [@b.submit value="action.submit"/]
+    [/@]
+[/@]
+[@b.foot/]

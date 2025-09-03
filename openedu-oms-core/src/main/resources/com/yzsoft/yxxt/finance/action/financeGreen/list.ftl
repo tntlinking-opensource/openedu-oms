@@ -1,0 +1,21 @@
+[#ftl]
+[@b.head/]
+[@b.grid  items=financeGreens var="financeGreen"]
+    [@b.gridbar]
+	bar.addItem("新增",action.add());
+	bar.addItem("修改",action.edit());
+	bar.addItem("删除",action.remove());
+    [/@]
+    [@b.row align="center"]
+        [@b.boxcol/]
+        [@b.col title="代码" property="code" /]
+        [@b.col title="困难类型" property="name" /]
+        [@b.col title="学历层次"][#list financeGreen.educations as v][#if v_index gt 0]、[/#if]${(v.name)!}[/#list][/@b.col]
+        [@b.col title="说明" property="remark" /]
+        [@b.col title="默认减免金额" property="money"/]
+        [@b.col title="状态" property="enabled"]
+            [@c.enabled financeGreen.enabled/]
+        [/@]
+    [/@]
+[/@]
+[@b.foot/]

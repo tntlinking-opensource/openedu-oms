@@ -1,0 +1,21 @@
+[#ftl]
+[@b.head/]
+[@b.grid  items=suppliess var="supplies"]
+    [@b.gridbar]
+    bar.addItem("新建",action.add());
+	bar.addItem("修改",action.edit());
+	bar.addItem("删除",action.remove());
+    [/@]
+    [@b.row align="center"]
+        [@b.boxcol width="1%"/]
+        [@b.col title="代码" property="code"/]
+        [@b.col title="名称" property="name"/]
+        [@b.col title="规格" property="spec"/]
+        [@b.col title="数量" property="num"/]
+        [@b.col title="价格（元）" property="price"/]
+        [@b.col title="状态" property="enabled"]
+            [@c.enabled supplies.enabled/]
+        [/@]
+    [/@]
+[/@]
+[@b.foot/]

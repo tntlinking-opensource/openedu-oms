@@ -1,0 +1,22 @@
+[#ftl]
+[@b.head/]
+[@b.grid  id="studentTable" items=students var="student" configs=listConfig]
+	[@b.gridbar title="菜单列表"]
+		bar.addItem("${b.text("action.edit")}",action.edit());
+		bar.addItem("${b.text("action.info")}",action.info());
+		bar.addItem("${b.text("action.export")}",action.exportData("grade:年级,department.name:学院,major.name:专业,adminClass.name:班级,code:学号,name:姓名,gender.name:性别,remark:备注",null,"&fileName=学生信息"));
+	[/@]
+	[@b.row align="center"]
+		[@b.boxcol/]
+		[@b.col property="grade" title="年级"/]
+		[@b.col property="department.name" title="院系"/]
+		[@b.col property="major.name" title="专业"/]
+		[@b.col property="adminClass.name" title="班级"/]
+		[@b.col property="code" title="学号"]
+			[@b.a href="!info?student.id=${student.id!}"]${(student.code)!}[/@]
+		[/@]
+		[@b.col property="name" title="姓名"/]
+		[@b.col property="gender.name" align="center" title="性别"/]
+	[/@]
+[/@]
+[@b.foot/]

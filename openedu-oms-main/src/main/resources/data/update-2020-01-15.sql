@@ -1,0 +1,1 @@
+alter table YXN_HOME_HELPS add birthday_click_time TIMESTAMP(6);

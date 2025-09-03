@@ -1,0 +1,7 @@
+[#ftl]
+[@b.navmenu title="校服采集" target="collect_div"]
+    [@b.navitem title="学生选择的尺码" href="/web/collect/clothes/clothes-student"/]
+    [@b.navitem title="服装类型设置" href="/web/collect/clothes/clothes-type"/]
+    [@b.navitem title="服装尺码设置" href="/web/collect/clothes/clothes-size"/]
+[/@]
+[@b.div id="collect_div"/]

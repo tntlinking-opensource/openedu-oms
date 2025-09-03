@@ -1,0 +1,8 @@
+[#ftl]
+[@b.head/]
+[@b.form name="imgLinkSearchForm"  action="!search" target="imgLinklist" title="ui.searchForm" theme="search"]
+	[@b.textfields names="imgLink.name;名称"/]
+    [@b.select name="imgLink.enabled" label="状态" value="" empty="..." items={'1':'启用','0':'禁用'}/]
+[/@]
+[@b.div id="imgLinklist" href="!search" /]
+[@b.foot/]

@@ -1,0 +1,1 @@
+imp u_yxxt/123456@xe file=u_yxxt.dmp full=y

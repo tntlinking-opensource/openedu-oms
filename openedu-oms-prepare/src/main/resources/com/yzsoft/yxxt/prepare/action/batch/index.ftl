@@ -1,0 +1,8 @@
+[#ftl]
+[@b.head/]
+[@b.form name="batchSearchForm"  action="!search" target="batchList" title="ui.searchForm" theme="search"]
+	[@b.textfield label="学年" name="batch.year"/]
+	[@b.select label="学期" name="batch.term.id" items=terms/]
+[/@]
+[@b.div id="batchList" href="!search" /]
+[@b.foot/]

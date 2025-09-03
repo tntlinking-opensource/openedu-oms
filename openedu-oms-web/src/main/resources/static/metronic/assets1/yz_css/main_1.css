@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+body { color: #333; padding: 0 !important; margin: 0 !important; direction: "ltr"; font-size: 12px }
+body, h1, h2, h3, h4, h5, h6 { font-family: Microsoft YaHei, sans-serif }
+.radio-list > label.radio-inline:first-child { padding-left: 0; }
+label.valid { margin-bottom: 0; display: none !important; }
+.portlet { background-color: #fff; }
+.tabs-left.nav-tabs > li { float: none; }
+.tabs-left.nav-tabs > li.active > a { border-color: #ddd transparent #ddd #ddd; }
+/*个人信息*/
+.caption { overflow: hidden; }
+.font_style_01 { font-family: 微软雅黑; font-size: 14px; color: #FFF; display: block; width: 120px; background-color: #0d6ac9; text-align: center; float: left; }
+.spc_type_edit { background-color: #74a758; color: #FFF; }
+.handlebtn { margin-top: 8px; margin-right: 10px; }
+.border_style_01 { border-top: 2px solid #0d6ac9; height: 40px; line-height: 40px; }
+/*.form-group{ margin-bottom:0px;}*/
+.height_style { line-height: 19px; }
+.photo_style_01 { display: block; text-align: center; }
+.photo_style_01 img { width: 105px; height: 135px; }
+.photo_font_style { text-align: center; display: block; }
+.form-horizontal .control-label { padding-top: 3px; }
+.form-control-static { padding-top: 3px; min-height: 0px; }
+.form-horizontal .form-group .mt-checkbox-inline, .form-horizontal .form-group .mt-radio-inline { padding-top: 0px; }
+.mt-checkbox-inline, .mt-radio-inline { padding-top: 0px; }
+.form-horizontal .checkbox, .form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline { padding-top: 0px; }
+/*.checkbox-inline, .radio-inline{ padding-left:0px;}*/
+.form-control { font-size: 12px; }
+.input_width_100 { width: 100% !important; }
+.input_width_61 { width: 61% !important; }
+.input_width_41 { width: 41% !important; }
+.input_width_31 { width: 31% !important; }
+.input_width_28 { width: 28% !important; }
+.gongkai_style { display: inline-block; margin: 0; }
+.table > thead > tr > th { text-align: center; }
+/*.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{ border:0;}*/
+
+.page-sidebar .page-sidebar-menu > li > a .title .status-red { font-family: 微软雅黑; font-size: 13px; color: #fd2424; }
+.page-sidebar .page-sidebar-menu > li > a .title .status-green { font-family: 微软雅黑; font-size: 13px; color: #79b741; }
+.btnlink { padding: 10px 15px; background-color: #FFF; }
+.btnlink a { display: block; width: 120px; height: 36px; background-color: #e9b029; font-family: 微软雅黑; font-size: 14px; color: #FFF; text-align: center; line-height: 36px;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    border-radius: 2px !important; }
+.btnlink a:hover { text-decoration: none; }
+/*常见问题*/
+.portlet.light.clearcss { padding: 0; }
+.clearcss .tabs-left.nav-tabs { border-right: none; margin-top: 40px; }
+.clearcss .tabs-left.nav-tabs > li.active > a { margin-right: -1px; border-right: 1px solid #FFF; z-index: 999; }
+.clearcss .tabbable-line > .nav-tabs > li.active { border-bottom: 4px solid #4694d2; }
+.clearcss .tabbable-line > .nav-tabs > li:hover { border-bottom: 4px solid #4694d2; }
+.yz-model { list-style: none; padding: 0; }
+.yz-model li { padding: 10px; border-bottom: 1px dotted #eeeeee; }
+.yx-model-a { overflow: hidden; }
+.yx-model-a-left { float: left; margin-right: 10px; }
+.yx-model-a-right { float: left; margin: 0; line-height: 150%; width: 94%; }
+.yx-model-a-right p { margin: 0; }
+.yx-model-last { border: 1px solid #eeeeee; padding: 20px 10px; }
+.yx-model-last p { margin: 0; color: #54a1de; }
+.yx-model-a-ht { background-color: #fdf8f2; }
+.yx-model-a-right-lightgrey { color: #808080; }
+@media (min-width: 992px) {
+    .page-content-wrapper .yx-page-content { margin-left: 0; }
+}
+/*到站登记*/
+.zn-form-control { height: 28px; }
+.route-head { background-color: #f5f5f5; padding: 15px; }
+.schemeName { font-size: 14px; color: #36c; margin-bottom: 10px; }
+.schemeTag { -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    border-radius: 2px !important; }
+.schemeTag font { padding: 5px; }
+.bus_time { font-size: 12px; color: #666; margin-right: 5px; }
+.busitemdelimiter { padding: 0 3px; color: #ddd; }
+/*在线测评*/
+.tab-content-a { background-color: #FFF; padding: 20px; }
+.nav-pills-a, .nav-tabs { margin-bottom: 0; }
+.nav-pills-a > li.active > a { background-color: #FFF; color: #0d6ac9; font-weight: bold; }
+.nav-pills-a > li.active > a, .nav-pills-a > li.active > a:focus, .nav-pills-a > li.active > a:hover { background-color: #FFF; color: #0d6ac9; font-weight: bold; }
+.nav-pills-a > li > a { background-color: #d0dee6; color: #808080; }
+.nav-pills-a > li > a:focus, .nav-pills-a > li > a:hover { background-color: #FFF; color: #0d6ac9; font-weight: bold; }
+.nav-pills-a > li + li { margin-left: 10px; }
+.cepingtable { border-top: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; text-align: center; width: 100%; }
+.cepingtable thead tr th { border-right: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb; background-color: #f5f5f5; padding: 10px; font-weight: bold; text-align: center; }
+.cepingtable tbody tr td { border-right: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb; padding: 10px; }
+.reanswerqa { display: block; background-color: #439ade; padding: 8px 6px; color: #FFF; }
+.reanswerqa:active, .reanswerqa:focus, .reanswerqa:hover { background-color: #288bd9; color: #FFF; text-decoration: none; }
+.ceping-yes { color: #74a758; }
+.ceping-no { color: #ff0000; }
+.nav-pills-b > li > a { background-color: #eeeeee; color: #808080; }
+.nav-pills-b > li + li { margin-left: 10px; }
+.ceping-title { display: block; width: 100%; background-color: #c5e8fc; color: #2375b6; font-size: 22px; text-align: center; padding: 20px 0; }
+.ceping-chose { margin-right: 4%; line-height: 200%; }
+.yz-model-2 li { padding: 10px 0; }
+.nopass { margin-top: 40px; }
+.nopassword { color: #e84444; font-size: 20px; }
+.yespassword { color: #209cdc; font-size: 20px; }
+
+/*考生录取结果查询*/
+.inquiryinput{width:50%;padding:5px;}
+.noticespan{margin-left:20px;color:#00a0e9;font-size:13px;}
+.noticespan2{color:#f34848;font-size:13px;}
+.inquirytable{border-top:1px solid #dbdbdb;border-left:1px solid #dbdbdb;text-align:center;width:100%;background-color:#FFF;}
+.inquirytable thead tr th{border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;background-color:#f5f5f5;padding:10px;font-weight:bold;text-align:center;}
+.inquirytable tbody tr td{border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;padding:10px;}

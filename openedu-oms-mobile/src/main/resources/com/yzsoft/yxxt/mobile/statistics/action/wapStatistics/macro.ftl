@@ -1,0 +1,10 @@
+[#ftl]
+
+[#function getData name]
+	[#list datas as v]
+		[#if v[0] == name]
+			[#return v[1]/]
+		[/#if]
+	[/#list]
+	[#return 0/]
+[/#function]

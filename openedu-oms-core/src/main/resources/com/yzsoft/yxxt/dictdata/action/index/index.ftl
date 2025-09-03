@@ -1,0 +1,8 @@
+[#ftl]
+[@b.navmenu title="其它数据" target="dictdata_div"]
+    [@ems.guard res="/dictdata/district"][@b.navitem title="行政区划代码" href="/dictdata/district"/][/@]
+    [@ems.guard res="/dictdata/nation"][@b.navitem title="民族代码" href="/dictdata/nation"/][/@]
+    [@ems.guard res="/dictdata/zzmm"][@b.navitem title="政治面貌代码" href="/dictdata/zzmm"/][/@]
+    [@ems.guard res="/dictdata/country"][@b.navitem title="国籍代码" href="/dictdata/country"/][/@]
+[/@]
+[@b.div id="dictdata_div"/]

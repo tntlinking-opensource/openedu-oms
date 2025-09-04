@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>河南测绘职业学院迎新动态数据</title>
+	<title>迎新动态数据</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!-- Mobile Meta -->
@@ -26,7 +26,7 @@
 	<div id="title">
 		<div class="caption-title clearfix">
 			<i class="title-left"><img src="${base}/static/yxxt/welcome/css/images/title-left.png"></i>
-			<p class="title-left-title-font">河南测绘职业学院迎新动态数据</p>
+			<p class="title-left-title-font">迎新动态数据</p>
 			<i class="title-left"><img src="${base}/static/yxxt/welcome/css/images/title-right.png"></i>
 		</div>
 

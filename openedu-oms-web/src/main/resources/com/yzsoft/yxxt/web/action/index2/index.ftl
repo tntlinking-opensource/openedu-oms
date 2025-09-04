@@ -244,7 +244,7 @@
 			  	[#if viewSetIndex.footInfo??]
                 	${viewSetIndex.footInfo}
                 [#else]
-                    <p>Copyright©2017   鄂ICP备05003344号<br>河南测绘职业学校象湖校区  郑州市中牟县永顺路与工贸路交叉口西北角    邮编：430073   电话：027-88386114</p>
+                    <p>Copyright©2025</p>
                 [/#if]
 			   <img src="${base}/static/metronic/assets1/yz_img/btm-hw_03.png" class="bottompattern-2">
 			   <img src="${base}/static/metronic/assets1/yz_img/btm-hw_04.png" class="bottompattern-1">

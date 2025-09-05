@@ -70,5 +70,12 @@
         </property>
     </bean>
 
+    <bean id="systemVersion" class="org.beangle.commons.meta.SystemVersionBean">
+        <property name="name" value="迎新系统"/>
+        <property name="version" value="1.0"/>
+        <property name="majorVersion" value="1"/>
+        <property name="minorVersion" value="0"/>
+        <property name="vendor" value="YZ Software"/>
+    </bean>
 </beans>
 

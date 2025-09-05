@@ -47,7 +47,7 @@ public class ColumnAction extends EntityDrivenAction {
         super.querySetting(query);
         Long parentId = getLong("column.parent.id");
         if(parentId == null){
-            query.where("column.parent is null");
+//            query.where("column.parent is null");
         }
     }
 

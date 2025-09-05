@@ -364,7 +364,7 @@
                     // remove file input
                     jQuery(myForm).find(".flashFileUpload").remove();
                     // disabled button
-                    if (!$(myForm).hasClass("multi_submit") && $(myForm).find(".search_box").length == 0) {
+                    if (!$(myForm).hasClass("multi_submit") && $(myForm).find(".search_items").length == 0) {
                         jQuery(myForm).find(":button,:submit,:reset").prop("disabled", true);
                     }
                     // fixed ckeditor

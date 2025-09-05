@@ -107,11 +107,6 @@
 				</p>
 				--]
         </div>
-        [#--
-        <div class="create-account">
-            <p><a href="http://www.yanzhisoft.com/" target="_bank" style="color:#E6E6E6;">彦致信息</a></p>
-        </div>
-        --]
         <input type="hidden" name="OWASP_CSRFTOKEN" value="${b.csrfToken()!}">
     [#--成功后跳转地址--]
         <input type="hidden" name="backurl" value="${backurl!}"/>

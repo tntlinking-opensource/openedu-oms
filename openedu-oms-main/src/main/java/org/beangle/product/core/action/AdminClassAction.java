@@ -34,7 +34,6 @@ import javax.annotation.Resource;
  * 班级管理
  *
  * @作者：周建明
- * @公司：上海彦致信息技术有限公司
  * @创建日期：2016年9月13日 下午5:12:22
  */
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)

@@ -35,7 +35,6 @@ import org.springframework.util.CollectionUtils;
  * 学生管理
  *
  * @作者：周建明
- * @公司：上海彦致信息技术有限公司
  * @创建日期：2016年9月18日 上午10:02:13
  */
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)

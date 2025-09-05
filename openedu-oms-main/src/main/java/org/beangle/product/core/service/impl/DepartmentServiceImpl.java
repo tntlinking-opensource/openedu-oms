@@ -20,7 +20,6 @@ import com.yzsoft.bpcg.ws.service.DepartmentWsService;
  * 部门院系接口
  * 
  * @作者：周建明
- * @公司：上海彦致信息技术有限公司
  * @创建日期：2016年9月13日 下午2:39:13
  */
 @Service

@@ -16,7 +16,6 @@ import org.springframework.util.Assert;
  * 班级导入监听器
  * 
  * @作者：周建明
- * @公司：上海彦致信息技术有限公司
  * @创建日期：2016年9月18日 上午10:32:04
  */
 public class AdminClassImportListener extends ItemImporterListener {

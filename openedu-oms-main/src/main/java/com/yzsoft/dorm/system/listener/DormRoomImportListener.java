@@ -19,7 +19,6 @@ import java.util.*;
  * 宿舍导入监听
  * 
  * @作者：周建明
- * @公司：上海彦致信息技术有限公司
  * @创建日期：2017年1月22日 下午2:24:24
  */
 public class DormRoomImportListener extends ItemImporterListener {

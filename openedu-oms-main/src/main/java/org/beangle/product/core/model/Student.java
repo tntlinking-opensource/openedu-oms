@@ -42,7 +42,6 @@ import org.beangle.workflow3.model.Ywfj;
  * 学生信息
  *
  * @作者：周建明
- * @公司：上海彦致信息技术有限公司
  * @创建日期：2016年9月14日 上午10:48:36
  */
 @Entity

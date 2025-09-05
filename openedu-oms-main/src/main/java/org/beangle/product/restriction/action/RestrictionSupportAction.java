@@ -23,7 +23,6 @@ import com.opensymphony.xwork2.ActionContext;
  * 数据级权限支持类
  * 
  * @作者：周建明
- * @公司：上海彦致信息技术有限公司
  * @创建日期：2017年8月11日 下午3:41:12
  */
 @Controller

@@ -130,19 +130,20 @@ public class UnRegisteredAction extends BaseCommonAction {
     public String registered() {
         Long[] studentIds = getEntityIds(getShortName());
         Boolean registered = getBoolean("registered");
-        if(registered){
-            for (Long studentId : studentIds) {//确认办理
-                processLinkLogService.saveLog(84l, 289l, studentId);
-                welcomeService.register(studentId, registered);
-            }
-        }else {
-            for (Long studentId : studentIds) {//确认办理
-                processLinkLogService.cancleLog(84l, 289l, studentId);
-                welcomeService.register(studentId, registered);
-            }
+        for (Long studentId : studentIds) {
+            welcomeService.register(studentId, registered);
         }
-
-
+//        if(registered){
+//            for (Long studentId : studentIds) {//确认办理
+//                processLinkLogService.saveLog(84l, 289l, studentId);
+//                welcomeService.register(studentId, registered);
+//            }
+//        }else {
+//            for (Long studentId : studentIds) {//确认办理
+//                processLinkLogService.cancleLog(84l, 289l, studentId);
+//                welcomeService.register(studentId, registered);
+//            }
+//        }
         return redirect("search", "info.save.success");
     }
 

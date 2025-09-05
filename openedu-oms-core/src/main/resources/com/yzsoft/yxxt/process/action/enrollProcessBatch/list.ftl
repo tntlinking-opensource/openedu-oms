@@ -9,7 +9,7 @@
     bar.addItem("流程设置",action.targetMethod("processBatchSetting", "main", null, false),"fa-wrench","yellow-crusta");
     [#--bar.addItem("数据检测",action.targetMethod("processBatchCheck", "main", null, false),"fa-wrench","purple");--]
     [#--bar.addItem("数据检测",action.method("processBatchCheck"));--]
-    bar.addItem("提交",action.single("submitProcess","你确认要提交所选的离校流程吗，提交完成后流程将无法修改！","&submited=1"),'fa-send','green');
+    bar.addItem("提交",action.single("submitProcess","你确认要提交所选的流程吗，提交完成后流程将无法修改！","&submited=1"),'fa-send','green');
     bar.addItem("取消提交",action.single("submitProcess","你确认要取消所选流程的提交状态吗！","&submited=0"),'fa-remove','red');
     [/@]
     [@b.row]

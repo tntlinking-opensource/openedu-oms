@@ -996,7 +996,7 @@
                                 var currState = History.getState();
                                 if (jQuery.type((currState.data || {}).target) != "undefined" && jQuery.type((currState.data || {}).html) != "undefined") {
                                     jQuery(currState.data.target).empty();
-                                    console.log(currState.data.html);
+                                    // console.log(currState.data.html);
                                     jQuery(currState.data.target).html(currState.data.html);
                                 }
                             });
@@ -1199,3 +1199,41 @@ submenus.getMenuA = function (a) {
         cache: false,
     });
 })(jQuery);
+$.fn.select2Remote = function (options) {
+    var opts = $.extend({}, $.fn.select2Remote.defaults, options);
+    this.select2({
+        allowClear: true,
+        placeholder: opts.blankMsg,
+        minimumInputLength: opts.minLength,
+        language: opts.language,
+        id: function (obj) {
+            return obj[opts.valueField]
+        },
+        ajax: {
+            url: opts.url,
+            delay: opts.delay,
+            //dataType: 'json',
+            data: function (params) {
+                return {key: params.term};
+            },
+            processResults: function (data) {
+                return {results: eval(data)};
+            },
+            cache: true
+        },
+        //formatResult: function(obj){return obj[opts.textField]},
+        //formatSelection:function(obj){return obj[opts.textField]},
+        escapeMarkup: function (m) {
+            return m;
+        }
+    });
+}
+$.fn.select2Remote.defaults = {
+    blankMsg: "请输入",
+    language: "zh-CN",
+    minLength: 1,
+    url: '',
+    delay: 250,
+    valueField: 'id',
+    textField: 'text'
+}

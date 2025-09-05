@@ -2,14 +2,14 @@
 <div class="portlet light ">
 	<div class="portlet-body">
 		<div class="row" style=" margin-top:5px;">
-			<div class="col-md-4  text-center" style="float:left;">
+			[#--<div class="col-md-4  text-center" style="float:left;">
 				<div class="pie-chart">
 					<a href="${b.url("dashboard?batchId=" + id)}" target="_blank">
 						<img src="${base}/static/yxxt/welcome/css/images/xc_tj.png"/>
 					</a>
 				</div>
 				<p style=" margin:0;">大屏显示</p>
-			</div>
+			</div>--]
 			<div class="col-md-4  text-center" style="float:left;">
 				<div class="pie-chart">
 					<a href="${b.url("!info?id=" + id)}" target="_blank">

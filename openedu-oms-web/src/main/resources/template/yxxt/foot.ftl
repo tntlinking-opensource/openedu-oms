@@ -2,7 +2,7 @@
 </div>
 </div>
 <div class="page-footer footer-index">
-	<div class="page-footer-inner">&copy; 2017 版权所有</div>
+	<div class="page-footer-inner">&copy; 2025 版权所有</div>
 	<div class="scroll-to-top"><i class="fa fa-arrow-circle-o-up"></i></div>
 </div>
 <!--[if lt IE 9]>

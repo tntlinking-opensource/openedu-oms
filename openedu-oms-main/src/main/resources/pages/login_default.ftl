@@ -129,9 +129,11 @@
     <!-- END LOGIN FORM -->
 
 </div>
-<div style="text-align: center; font-size: 26px; color: #fff; margin-top: 50px;">
+<div style="text-align: center; font-size: 18px; color: #fff; margin-top: 50px;">
+    Copyright © 2025湖北天天数链技术有限公司<br/>
+    本系统软件源代码许可来源于
     <a href="https://open.tntlinking.com/communityTreaty" target="_blank"
-       style="white-space: nowrap; color: #fff;">本系统软件源代码来源于天天开源的许可</a>
+       style="white-space: nowrap; color: #fff;">《天天开源软件（社区版）许可协议》</a>
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN COPYRIGHT -->

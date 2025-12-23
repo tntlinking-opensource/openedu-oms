@@ -128,6 +128,18 @@
     </div>
     <!-- END HEADER INNER -->
 </div>
+
+<style>
+    body{
+        position: relative;
+    }
+</style>
+<div style="text-align: center; font-size: 12px; color: #fff; position: absolute; bottom: 8px; width: 100vw;">
+    Copyright © 2025湖北天天数链技术有限公司
+    本系统软件源代码许可来源于
+    <a href="https://open.tntlinking.com/communityTreaty" target="_blank"
+       style="white-space: nowrap; color: #fff;">《天天开源软件（社区版）许可协议》</a>
+</div>
 <script>
     $(function () {
 //		$(".top_menu a:first").addClass("current_hit").click();

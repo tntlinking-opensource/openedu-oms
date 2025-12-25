@@ -44,7 +44,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="page-logo">
                     <a href="${base}/index.jsp">
-                        <img src="${base}/common/system-icon-download.action?code=YXXT_LOGO" alt="Logo" style="max-height: 80px;"/>
+                        <img src="${base}/static/images/logo3.png" alt="Logo" style="max-height: 50px;"/>
                     </a>
                 </div>
             [#if userid??]

@@ -48,7 +48,7 @@
     <div class="page-header-inner ">
         <div class="row">
             <div class="container">
-                <div class="page-logo"><img src="${base}/common/system-icon-download.action?code=YXXT_LOGO_INDEX" alt="logo" class="logo-default"/></div>
+                <div class="page-logo"><img src="${base}/static/images/logo2.png" alt="logo" class="logo-default" height="40" style="height: 50px;"/></div>
                 <div style="margin-top:7px; float: right;">
 	                [#if user??]
 	                    <div class="user_box">欢迎您！${user.fullname} [#if student??]同学[#elseif teacher??]老师[/#if]</div>
@@ -81,20 +81,20 @@
 		                        $(".inline").colorbox({
 		                        	title:"报到须知",
 		                        	overlayClose:false,
-		                        	inline:true, 
+		                        	inline:true,
 		                        	width:"50%",
 		                        	open:true,
 		                        });
-		                        
+
 		                        $(".submit").click(function(){
 		                        	$.ajax({
 							            url: '${base}/web/index2.action?method=noticed',
 							            type: 'POST'
 							        });
-		                        	
+
 		                        	$("#cboxClose").click();
 		                        })
-		                        
+
 		                        $("#cboxClose").hide();
 		                    });
 		                </script>
@@ -217,10 +217,10 @@
 							                </ul>
 							            </div>
 							        </div>
-							      </div> 
+							      </div>
 							    <!-- 流程结束 -->
-							    
-							    <!-- 快捷功能 --> 
+
+							    <!-- 快捷功能 -->
 							      <div class="col-md-4" style="background-color:#f1efe3;">
 							      	<div class="yx-model-block">
 							        <p class="new_style"><img src="${base}/static/metronic/assets1/yz_img/icon-s_05.png">移动迎新</p>
@@ -240,15 +240,14 @@
 
 			<!--页脚-->
 			<div class="row" style="margin-top:40px;">
-			  <div class="col-md-12 footer-bg foot_info_div">
-			  	[#if viewSetIndex.footInfo??]
-                	${viewSetIndex.footInfo}
-                [#else]
-                    <p>Copyright©2025</p>
-                [/#if]
+			  <div class="col-md-12 footer-bg foot_info_div" style="line-height: 80px;">
+                  Copyright © 2025&nbsp;湖北天天数链技术有限公司&nbsp;
+                  本系统软件源代码许可来源于
+                  <a href="https://open.tntlinking.com/communityTreaty" target="_blank"
+                     style="white-space: nowrap;">《天天开源软件（社区版）许可协议》</a>
 			   <img src="${base}/static/metronic/assets1/yz_img/btm-hw_03.png" class="bottompattern-2">
 			   <img src="${base}/static/metronic/assets1/yz_img/btm-hw_04.png" class="bottompattern-1">
-			  </div> 
+			  </div>
 			</div>
 			<!--页脚结束 -->
 
